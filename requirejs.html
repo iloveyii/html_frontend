@@ -7,6 +7,7 @@
         <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
         <link type="text/css" rel="stylesheet" href="css/main.css" />
         <link type="text/css" rel="stylesheet" href="css/font-awesome.css" rel="stylesheet">
+        <script data-main="js/common" src="js/require.js"></script>
     </head>
     <body>
         <!-- Fixed Navigation bar with drop down box
@@ -125,11 +126,14 @@
             
         </div>
         </div>     
-        <script src="js/jquery.js"></script>
-        
+        <script type="text/javascript">
+            require(['common','jquery'], function() {
+                $("#req-demo").html('This is filled by jQuery');
+            });
+        </script>
         <script type="text/javascript">
             $(function() {
-                $("#req-demo").html('This is filled by jQuery');
+                // $("#req-demo").html('This is filled by jQuery');
             });
         </script>
     </body>
