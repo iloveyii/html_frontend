@@ -7,6 +7,8 @@
         <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
         <link type="text/css" rel="stylesheet" href="css/main.css" />
         <link type="text/css" rel="stylesheet" href="css/font-awesome.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/nlslightbox.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/istoolbar.css" rel="stylesheet">
     </head>
     <body>
         <!-- Fixed Navigation bar with drop down box
@@ -62,81 +64,18 @@
                 </div>
             </div>
 
-            <!-- Accordian 
+            <!-- Live Editor 
             =========================================== -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-
-                        <div class="panel-group" id="accordian">
-
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="#section1" data-toggle="collapse" data-parent="#accordian">
-                                            Question 1
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-collapse collapse in" id="section1">
-                                    <div class="panel-body">
-                                        This is section of panel.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-success">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="#section2" data-toggle="collapse" data-parent="#accordian">
-                                            Question 2
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-collapse collapse" id="section2">
-                                    <div class="panel-body">
-                                        This is section of panel.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-info">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="#section3" data-toggle="collapse" data-parent="#accordian">
-                                            Question 3
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-collapse collapse" id="section3">
-                                    <div class="panel-body">
-                                        This is section of panel.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-danger">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="#section4" data-toggle="collapse" data-parent="#accordian">
-                                            Question 4
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-collapse collapse" id="section4">
-                                    <div class="panel-body">
-                                        This is section of panel.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
+                        <textarea id="txtContent" rows="4" cols="30"></textarea>
                     </div>
+
                 </div>
             </div>
-            
-        </div> <!-- Wrapper -->    
+             
+
         
         <br /><br /><br />
         <!-- Font Awesome 
@@ -186,12 +125,39 @@
             
             
         </div>
-        
+        </div>     
         
         
         
         
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
+        <script src="js/innovaeditor.js"></script>
+        <script src="js/nlslightbox.js"></script>
+        <script src="js/nlsanimation.js"></script>
+        <script src="js/dialog.js"></script>
+        <script src="js/istoolbar.js"></script>
+        <script src="js/editor.js"></script>
+        <script src="js/editor_lang.js"></script>
+        <script src="js/jquery.innovaeditor.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+        <script src="js/webfont.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#txtContent').liveEdit({
+                    height: 450,
+                    css: ['styles/default.css', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css', 'styles/bootstrap_extend.css'],
+                    groups: [
+                            ["group1", "", ["Bold", "Italic", "Underline", "ForeColor", "RemoveFormat"]],
+                            ["group2", "", ["Bullets", "Numbering", "Indent", "Outdent"]],
+                            ["group3", "", ["Paragraph", "FontSize", "FontDialog", "TextDialog"]],
+                            ["group4", "", ["LinkDialog", "ImageDialog", "TableDialog", "Emoticons", "Snippets"]],
+                            ["group5", "", ["Undo", "Redo", "FullScreen", "SourceDialog"]]
+                            ]
+                });
+                $('#txtContent').data('liveEdit').startedit();
+            });
+        </script>
+        <textarea id="__hiddentext" style="display:none"></textarea>
     </body>
 </html>

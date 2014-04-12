@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Twitter Bootstrap 3 - Template </title>
+        <title>RequireJS - A JS module loader Demo </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
@@ -53,90 +53,28 @@
                     <div class="col-md-12">
 
                         <div class="jumbotron">
-                            <h1>This is an Accordian</h1>
-                            <p>This is some text.This is some text.This is some text.</p>
-                            <p><a href="#" class="btn btn-success">Learn more</a></p>
+                            <h1>This is     RequireJS Demo</h1>
+                            <p>RequireJS is a JavaScript file and module loader.</p>
+                            <p><a href="http://requirejs.org/" class="btn btn-success">Learn more</a></p>
                         </div>
 
                     </div>
                 </div>
             </div>
 
-            <!-- Accordian 
+            <!-- JS Require JS 
             =========================================== -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-
-                        <div class="panel-group" id="accordian">
-
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="#section1" data-toggle="collapse" data-parent="#accordian">
-                                            Question 1
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-collapse collapse in" id="section1">
-                                    <div class="panel-body">
-                                        This is section of panel.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-success">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="#section2" data-toggle="collapse" data-parent="#accordian">
-                                            Question 2
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-collapse collapse" id="section2">
-                                    <div class="panel-body">
-                                        This is section of panel.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-info">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="#section3" data-toggle="collapse" data-parent="#accordian">
-                                            Question 3
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-collapse collapse" id="section3">
-                                    <div class="panel-body">
-                                        This is section of panel.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-danger">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="#section4" data-toggle="collapse" data-parent="#accordian">
-                                            Question 4
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-collapse collapse" id="section4">
-                                    <div class="panel-body">
-                                        This is section of panel.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
+                        <p>This is demo div: </p>
+                        <div id="req-demo"></div>
                     </div>
+
                 </div>
             </div>
-            
-        </div> <!-- Wrapper -->    
+             
+
         
         <br /><br /><br />
         <!-- Font Awesome 
@@ -186,12 +124,13 @@
             
             
         </div>
-        
-        
-        
-        
-        
+        </div>     
         <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.js"></script>
+        
+        <script type="text/javascript">
+            $(function() {
+                $("#req-demo").html('This is filled by jQuery');
+            });
+        </script>
     </body>
 </html>
